@@ -4,3 +4,7 @@ psycopg2-binary
 sentence-transformers
 google-generativeai
 python-dotenv
+sqlalchemy
+python-multipart
+passlib
+pydantic[email]

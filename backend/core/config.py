@@ -23,3 +23,5 @@ class Config:
     DB_PASSWORD = os.getenv("DB_PASSWORD")
 
     GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+    PROD_DATABASE_URL = os.getenv("PROD_DATABASE_URL")
