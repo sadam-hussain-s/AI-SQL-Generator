@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import QueryForm from "../components/QueryForm";
 import QueryResult from "../components/QueryResult";
-//import FileUpload from "../components/FileUpload";
+import FileUpload from "../components/FileUpload";
 
 function Home() {
     const [result, setResult] = useState(null);
@@ -11,8 +11,7 @@ function Home() {
         <div>
             <QueryForm setResult={setResult} />
             <QueryResult result={result} />
-            {//<FileUpload />
-            }
+            <FileUpload />
         </div>
     );
 }

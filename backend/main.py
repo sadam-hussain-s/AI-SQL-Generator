@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api import query #, upload
+from backend.api import query, upload
 
 app = FastAPI(title="GenAI SQL Assistant")
 
@@ -13,7 +13,7 @@ app.add_middleware(
 )
 
 app.include_router(query.router, prefix="/api")
-#app.include_router(upload.router, prefix="/api")
+app.include_router(upload.router, prefix="/api")
 
 @app.get("/")
 async def root():

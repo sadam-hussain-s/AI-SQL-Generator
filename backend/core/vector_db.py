@@ -45,3 +45,15 @@ class VectorDatabase:
             LIMIT 1;
         """, (embedding,))
         return self.cur.fetchone()
+    
+    def store_queries_from_file(self, file_path):
+  
+        with open(file_path, "r") as file:
+            for line in file:
+                query_text = line.strip()
+                if query_text:
+                    embedding = self.model.encode(query_text).tolist()
+                    self.cur.execute("INSERT INTO sql_queries (query, embedding) VALUES (%s, %s)", (query_text, embedding))
+
+        self.conn.commit()
+
