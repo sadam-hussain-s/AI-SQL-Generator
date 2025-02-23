@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    white-space: pre-wrap;  /* Preserve formatting and wrap long lines */
+    word-wrap: break-word;  /* Ensure words wrap properly */
+    overflow-wrap: break-word;
+    overflow: hidden;       /* Prevent scrolling */
+    max-width: 100%; 
+}
+
+.container pre {
+    white-space: pre-wrap;   /* Allows wrapping */
+    word-wrap: break-word;
+    overflow: hidden;        /* Hides horizontal scrollbar */
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

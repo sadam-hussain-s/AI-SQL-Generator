@@ -169,3 +169,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+/node_modules
+/frontend/node_modules/
+ai-sql/
+package-lock.json
+logs/
