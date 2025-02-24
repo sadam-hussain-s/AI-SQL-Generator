@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/Navbar.css"; // Importing CSS from styles folder
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -10,9 +11,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav>
-            <h2>AI SQL Assistant</h2>
-            <button onClick={handleLogout}>Logout</button>
+        <nav className="navbar">
+            <h2 className="logo">AI SQL Assistant</h2>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
         </nav>
     );
 };

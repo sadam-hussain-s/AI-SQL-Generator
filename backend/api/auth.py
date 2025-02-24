@@ -51,7 +51,7 @@ def login_user(user: LoginUser, db: Session = Depends(get_db)):
     hashed_test = pwd_context.hash("test_password")
     print(pwd_context.verify("test_password", hashed_test))  # Should return True
 
-    if not db_user or not pwd_context.verify(db_user.password, user.password):
+    if not db_user or not pwd_context.verify(user.password, db_user.password):
         raise HTTPException(status_code=400, detail="Invalid credentials")
 
-    return {"message": "Login successful", "user": {"username": user.username, "email": user.email}}
+    return {"message": "Login successful", "user": {"username": user.username}}

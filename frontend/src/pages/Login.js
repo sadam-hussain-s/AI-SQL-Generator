@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+const API_URL = "http://localhost:8000/auth"; // FastAPI Backend
 
 const Login = () => {
     const [formData, setFormData] = useState({ username: "", password: "" });
@@ -17,6 +18,7 @@ const Login = () => {
         
         const response = await fetch(`${API_URL}/login/`, {
             method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 username: formData.username,
                 password: formData.password
@@ -25,6 +27,7 @@ const Login = () => {
 
         if (response.ok) {
             const data = await response.json();
+            console.log(data.user)
             localStorage.setItem("user", JSON.stringify(data.user));
             navigate("/");
         } else {
