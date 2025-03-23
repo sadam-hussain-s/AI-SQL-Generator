@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const API_URL = "http://localhost:8000/auth"; // FastAPI Backend
-
+import "../styles/Register.css"; 
 
 const Register = () => {
     const [formData, setFormData] = useState({ username: "", email: "", password: "" });
+    const [loading,setLoading]=useState(false);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -13,6 +14,8 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        try{
         const response = await fetch(`${API_URL}/register/`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -29,15 +32,29 @@ const Register = () => {
         } else {
             alert("Registration failed. Try a different username/email.");
         }
+        setLoading(false);
+    }catch(error){
+        alert("Something went wrong. Please try again.");
+    }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div className="register-container">
+        <form onSubmit={handleSubmit} className="register-form">
             <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
             <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
             <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-            <button type="submit">Register</button>
+            <button type="submit" disabled={loading}>
+            {loading ? "Registering..." : "Register"}
+            </button>
         </form>
+        {loading && (
+                <div className="loading-overlay">
+                    <div className="spinner"></div>
+                    <p>Processing...</p>
+                </div>
+            )}
+        </div>
     );
 };
 
