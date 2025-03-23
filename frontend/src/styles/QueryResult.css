@@ -1,0 +1,128 @@
+/* General Markdown Styling */
+.markdown-content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    /*background: white;*/
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    white-space: pre-wrap;  /* Preserve formatting and wrap long lines */
+    word-wrap: break-word;  /* Ensure words wrap properly */
+    overflow-wrap: break-word;
+    overflow: hidden;       /* Prevent scrolling */
+    max-width: 100%;    
+}
+
+.container pre {
+    white-space: pre-wrap;   /* Allows wrapping */
+    word-wrap: break-word;
+    overflow: hidden;        /* Hides horizontal scrollbar */
+}
+
+.container-old {
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    white-space: pre-wrap;  /* Preserve formatting and wrap long lines */
+    word-wrap: break-word;  /* Ensure words wrap properly */
+    overflow-wrap: break-word;
+    overflow: hidden;       /* Prevent scrolling */
+    max-width: 100%; 
+}
+
+/* Headings */
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* Code Blocks */
+.markdown-content pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px;
+    white-space: pre-wrap;   /* Allows wrapping */
+    word-wrap: break-word;
+    overflow: hidden;  
+}
+
+.markdown-content code {
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Inline Code */
+.markdown-content p code {
+    background: #eee;
+    color: #c7254e;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Blockquote */
+.markdown-content blockquote {
+    border-left: 4px solid #3498db;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f0f8ff;
+    font-style: italic;
+}
+
+/* Lists */
+.markdown-content ul {
+    padding-left: 20px;
+}
+
+.markdown-content li {
+    margin-bottom: 5px;
+}
+
+/* Tables */
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.markdown-content th,
+.markdown-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.markdown-content th {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Links */
+.markdown-content a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+.code-block {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px;
+    white-space: pre-wrap;
+    display: block;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+}
