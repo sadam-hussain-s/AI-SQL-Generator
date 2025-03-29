@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QueryForm from "../components/QueryForm";
 import QueryResult from "../components/QueryResult";
-import FileUpload from "../components/FileUpload";
 import Navbar from "../components/Navbar";
 
 function Home() {
@@ -14,7 +13,6 @@ function Home() {
             <Navbar />
             <QueryForm setResult={setResult} />
             <QueryResult result={result} />
-            <FileUpload />
         </div>
     );
 }

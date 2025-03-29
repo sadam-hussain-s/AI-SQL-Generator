@@ -25,3 +25,12 @@ export async function uploadSQLFile(formData) {
     });
     return response.json();
 }
+
+export async function analyzeSQLPerformance(query) {
+    const response = await fetch(`${API_URL}/analyze_sql/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify( query ),
+    });
+    return response.json();
+}

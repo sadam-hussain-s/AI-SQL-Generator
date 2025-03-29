@@ -15,8 +15,8 @@ function FileUpload() {
 
     return (
         <div className="container">
-            <h3>Upload SQL Query File</h3>
-            <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+            <h3>Upload SQL Query File (.sql)</h3>
+            <input type="file" accept=".sql" onChange={(e) => setFile(e.target.files[0])}  />
             <button onClick={handleUpload}>Upload</button>
             {message && <p>{message}</p>}
         </div>
