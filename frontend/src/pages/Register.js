@@ -38,8 +38,14 @@ const Register = () => {
     }
     };
 
+
+    
+
+
     return (
         <div className="register-container">
+            <h2>AI SQL Assistant</h2>
+            <h2>Register</h2>
         <form onSubmit={handleSubmit} className="register-form">
             <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
             <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
@@ -47,6 +53,9 @@ const Register = () => {
             <button type="submit" disabled={loading}>
             {loading ? "Registering..." : "Register"}
             </button>
+            <p>Already have an account?</p>
+            <button onClick={() => navigate("/login")}>Login</button>
+
         </form>
         {loading && (
                 <div className="loading-overlay">

@@ -42,6 +42,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
+            <h2>AI SQL Assistant</h2>
             <h2>Login</h2>
             <form onSubmit={handleSubmit} className="login-form">
                 <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
